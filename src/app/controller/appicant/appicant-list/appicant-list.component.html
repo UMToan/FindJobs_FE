@@ -1,0 +1,49 @@
+<section class="section-hero overlay inner-page bg-image" style="background-image: url('../../../../assets/images/hero_1.jpg');"
+      id="home-section">
+      <div class="container">
+         <div class="row">
+           <div class="col-md-7">
+             <h1 class="text-white font-weight-bold">Areas List</h1>
+             <div class="custom-breadcrumbs">
+               <a href="#">Home</a> <span class="mx-2 slash">/</span>
+               <a href="#">Area</a> <span class="mx-2 slash">/</span>
+               <span class="text-white"><strong>Areas List</strong></span>
+             </div>
+           </div>
+         </div>
+       </div>
+</section>
+
+<div class="container">
+   <table class="table table-striped">
+      <thead>
+         <tr>
+            <th>ID</th>
+            <th>JobsID</th>
+            <th>ResumeID</th>
+            <th>Created Date</th>
+            <th>Created By</th>
+            <th>Modified Date</th>
+            <th>Modified By</th>
+            <th>Action</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr *ngFor="let app of applicants">
+            <td>{{app.id}}</td>
+            <td>{{app.jobsID}}</td>
+            <td>{{app.resumeID}}</td>
+            <td>{{app.createdDate}}</td>
+            <td>{{app.createdBy}}</td>
+            <td>{{app.modifiedDate}}</td>
+            <td>{{app.modifiedBy}}</td>
+            <td>
+               <a [routerLink]="['/areas-create']" class="btn btn-warning">Create</a>
+            </td>
+            <!-- <td>
+               <button (click)="areaUpdate(area.id)" class="btn btn-info">Update</button>
+            </td> -->
+         </tr>
+      </tbody>
+   </table>
+</div>

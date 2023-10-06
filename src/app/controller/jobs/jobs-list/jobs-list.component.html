@@ -1,0 +1,55 @@
+<section class="section-hero overlay inner-page bg-image" style="background-image: url('../../../../assets/images/hero_1.jpg');"
+      id="home-section">
+      <div class="container">
+         <div class="row">
+           <div class="col-md-7">
+             <h1 class="text-white font-weight-bold">Job List</h1>
+             <div class="custom-breadcrumbs">
+               <a href="#">Home</a> <span class="mx-2 slash">/</span>
+               <a href="#">Job</a> <span class="mx-2 slash">/</span>
+               <span class="text-white"><strong>Job List</strong></span>
+             </div>
+           </div>
+         </div>
+       </div>
+</section>
+<div class="container">
+    <table class="table table-striped">
+       <thead>
+          <tr>
+             <th scope="col">ID</th>
+             <th scope="col">jobsTitle</th>
+             <th scope="col">jobsStatus</th>
+             <th scope="col">company</th>
+             <th scope="col">jobsLocation</th>
+             <th scope="col">createdDate</th>
+             <th scope="col">createdBy</th>
+             <th scope="col">modifiedDate</th>
+             <th scope="col">modifiedBy</th>
+             <th scope="col">Action</th>
+          </tr>
+       </thead>
+       <tbody>
+          <tr *ngFor="let job of jobs">
+             <td scope="col">{{job.id}}</td>
+             <td scope="col">{{job.jobsTitle}}</td>
+             <td scope="col">{{job.jobsStatus}}</td>
+             <td scope="col">{{job.company}}</td>
+             <td scope="col">{{job.jobsLocation}}</td>
+             <td scope="col">{{job.createdDate}}</td>
+             <td scope="col">{{job.createdBy}}</td>
+             <td scope="col">{{job.modifiedDate}}</td>
+             <td scope="col">{{job.modifiedBy}}</td>
+             <td>
+                <a [routerLink]="['/jobs-create']" class="btn btn-warning">Create</a>
+             </td>
+             <td>
+                <button (click)="jobsUpdate(job.id)" class="btn btn-info">Update</button>
+             </td>
+             <td>
+               <button (click)="jobsDetail(job.id)" class="btn btn-danger">Details</button>
+            </td>
+          </tr>
+       </tbody>
+    </table>
+ </div>

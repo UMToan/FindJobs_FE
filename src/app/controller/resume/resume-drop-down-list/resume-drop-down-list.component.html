@@ -1,0 +1,4 @@
+<select class="form-control" (change)="ChangeresumeName($event)"  id="locationName" name="locationName">
+    <option value="">-- Chọn hình thức tuyển --</option>
+    <option *ngFor="let re of resume" [value]="re.id">{{re.name}}</option>
+</select>

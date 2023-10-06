@@ -1,0 +1,4 @@
+<select class="form-control" (change)="ChangelocationName($event)"  id="locationName" name="locationName">
+    <option value="">-- Chọn khu vực --</option>
+    <option *ngFor="let area of areas" [value]="area.id">{{area.locationName}}</option>
+ </select>

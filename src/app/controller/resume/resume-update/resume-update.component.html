@@ -1,0 +1,144 @@
+<section class="section-hero overlay inner-page bg-image" style="background-image: url('../../../../assets/images/hero_1.jpg');"
+      id="home-section">
+      <div class="container">
+         <div class="row">
+           <div class="col-md-7">
+             <h1 class="text-white font-weight-bold">Resume Update</h1>
+             <div class="custom-breadcrumbs">
+               <a href="#">Home</a> <span class="mx-2 slash">/</span>
+               <a href="#">Resume</a> <span class="mx-2 slash">/</span>
+               <span class="text-white"><strong>Resume Update</strong></span>
+             </div>
+           </div>
+         </div>
+       </div>
+</section>
+<div class="container">
+    <div class="row align-items-center mb-5">
+       <div class="col-lg-8 mb-4 mb-lg-0">
+          <div class="d-flex align-items-center">
+             <div>
+             </div>
+          </div>
+       </div>
+    </div>
+ 
+    <div class="row mb-5">
+       <div class="col-lg-12 border rounded">
+          <form (ngSubmit)="onSubmit()" class="p-4 p-md-5">
+ 
+             <div class="form-group">
+                <label for="">Account ID</label>
+                <input type="text" class="form-control" id="accountID" [(ngModel)]="resume.accountID"
+                   name="accountID"/>
+                      <!-- <app-area-drop-down-list (areaID)="slectAreaID($event)"></app-area-drop-down-list> -->
+             </div>
+             
+             <div class="form-group">
+                <label for="">Name</label>
+                <input type="text" class="form-control" id="name" [(ngModel)]="resume.name"
+                   name="name">
+             </div>
+
+             <div class="form-group">
+                <label for="">Mail</label>
+                <input type="text" class="form-control" id="mail" [(ngModel)]="resume.mail"
+                   name="mail">
+             </div>
+
+             <div class="form-group">
+                <label for="">dateOfBirth</label>
+                <input type="date" class="form-control" id="dateOfBirth" [(ngModel)]="resume.dateOfBirth"
+                   name="dateOfBirth">
+             </div>
+
+             <div class="form-group">
+                <label for="">phoneNumber</label>
+                   <input type="number" class="form-control" id="phoneNumber" [(ngModel)]="resume.phoneNumber"
+                    name="phoneNumber">
+                
+             </div>
+
+             <div class="form-group">
+                <label for="">address</label>
+                <input type="text" class="form-control" id="address" [(ngModel)]="resume.address"
+                   name="address">
+             </div>
+
+             <div class="form-group">
+                <label for="">university</label>
+                <ckeditor [editor]="Editor" id="university" [(ngModel)]="resume.university"
+                   name="university"></ckeditor>
+             </div>
+
+             <div class="form-group">
+                <label for="">major</label>
+                <!-- <input type="text" class="form-control" id="jobsDescription" [(ngModel)]="job.jobsDescription"
+                   name="jobsDescription"> -->
+                <ckeditor [editor]="Editor" id="major" [(ngModel)]="resume.major"
+                   name="major">
+                </ckeditor>
+             </div>
+
+             <div class="form-group">
+                <label for="">description</label>
+                   <ckeditor [editor]="Editor" id="description" [(ngModel)]="resume.description"
+                   name="description">
+                </ckeditor>
+             </div>
+
+             <div class="form-group">
+                <label for="">graduationYear</label>
+                <input type="date" class="form-control" id="graduationYear" [(ngModel)]="resume.graduationYear"
+                   name="graduationYear">
+             </div>
+
+             <div class="form-group">
+                <label for="">skills</label>
+                <ckeditor [editor]="Editor" id="skills" [(ngModel)]="resume.skills"
+                   name="skills"></ckeditor>
+             </div>
+
+             <div class="form-group">
+                <label for="">experience</label>
+                   <ckeditor [editor]="Editor" id="experience" [(ngModel)]="resume.experience"
+                   name="experience">
+                </ckeditor>  
+             </div>
+
+             <div class="form-group">
+                <label for="">certificate</label>
+                   <ckeditor [editor]="Editor" id="certificate" [(ngModel)]="resume.certificate"
+                   name="certificate">
+                </ckeditor>  
+             </div>
+
+             <div class="form-group">
+                <label for="">Created Date</label>
+                <input type="text" class="form-control" id="createdDate" [(ngModel)]="resume.createdDate"
+                   name="createdDate">
+             </div>
+ 
+             <div class="form-group">
+                <label for="">Created By</label>
+                <input type="text" class="form-control" id="createdBy" [(ngModel)]="resume.createdBy" name="createdBy">
+             </div>
+ 
+             <div class="form-group">
+                <label for="">Modified Date</label>
+                <input type="text" class="form-control" id="modifiedDate" [(ngModel)]="resume.modifiedDate"
+                   name="modifiedDate">
+             </div>
+ 
+             <div class="form-group">
+                <label for="">Modified By</label>
+                <input type="text" class="form-control" id="modifiedBy" [(ngModel)]="resume.modifiedBy" name="modifiedBy">
+             </div>
+ 
+             <button class="btn btn-success mt-3" type="submit">Submit</button>
+          </form>
+       </div>
+    </div>
+ </div>
+
+

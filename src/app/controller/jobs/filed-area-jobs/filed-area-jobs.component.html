@@ -1,0 +1,4 @@
+<select class="form-control" (change)="filedAreaJobs($event)" id="locationName" name="locationName">
+    <option value="">-- Chọn hình thức tuyển --</option>
+    <option *ngFor="let job of jobs" [value]="job.id">{{job.areaID}}</option>
+ </select>

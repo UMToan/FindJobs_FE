@@ -7,6 +7,7 @@
       "projectType": "application",
       "schematics": {},
       "root": "",
+      
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
@@ -25,6 +26,7 @@
               "src/assets"
             ],
             "styles": [
+              
               "src/styles.css"
             ],
             "scripts": []
@@ -94,5 +96,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "37b80e9c-1601-4b27-beb2-bbb213bc83f8"
   }
 }

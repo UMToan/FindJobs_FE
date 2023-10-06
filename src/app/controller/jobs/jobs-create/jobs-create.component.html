@@ -1,0 +1,142 @@
+<section class="section-hero overlay inner-page bg-image" style="background-image: url('../../../../assets/images/hero_1.jpg');"
+      id="home-section">
+      <div class="container">
+         <div class="row">
+           <div class="col-md-7">
+             <h1 class="text-white font-weight-bold">Jobs Create</h1>
+             <div class="custom-breadcrumbs">
+               <a href="#">Home</a> <span class="mx-2 slash">/</span>
+               <a href="#">Job</a> <span class="mx-2 slash">/</span>
+               <span class="text-white"><strong>Jobs Create</strong></span>
+             </div>
+           </div>
+         </div>
+       </div>
+</section>
+<div class="container">
+    <div class="row align-items-center mb-5">
+       <div class="col-lg-8 mb-4 mb-lg-0">
+          <div class="d-flex align-items-center">
+             <div>
+             </div>
+          </div>
+       </div>
+    </div>
+ 
+    <div class="row mb-5">
+       <div class="col-lg-12 border rounded">
+          <form (ngSubmit)="onSubmit()" class="p-4 p-md-5">
+ 
+             <div class="form-group">
+                <label for="">Area Name</label>
+                <!-- <input type="text" class="form-control" id="areaID" [(ngModel)]="job.areaID"
+                   name="areaID"/> -->
+                      <app-area-drop-down-list (areaID)="slectAreaID($event)"></app-area-drop-down-list>
+             </div>
+             
+             <div class="form-group">
+                <label for="">jobsTitle</label>
+                <input type="text" class="form-control" id="jobsTitle" [(ngModel)]="job.jobsTitle"
+                   name="jobsTitle">
+             </div>
+
+             <div class="form-group">
+                <label for="">jobsStatus</label>
+                <input type="text" class="form-control" id="jobsStatus" [(ngModel)]="job.jobsStatus"
+                   name="jobsStatus">
+             </div>
+
+             <div class="form-group">
+                <label for="">company</label>
+                <input type="text" class="form-control" id="company" [(ngModel)]="job.company"
+                   name="company">
+             </div>
+
+             <div class="form-group">
+                <label for="">thumbnail</label>
+                   <ckeditor [editor]="Editor" id="thumbnail" [(ngModel)]="job.thumbnail"
+                    name="thumbnail">
+                 </ckeditor>
+
+             </div>
+
+             <div class="form-group">
+                <label for="">jobsLocation</label>
+                <input type="text" class="form-control" id="jobsLocation" [(ngModel)]="job.jobsLocation"
+                   name="jobsLocation">
+             </div>
+
+             <div class="form-group">
+                <label for="">jobsMail</label>
+                <input type="text" class="form-control" id="jobsMail" [(ngModel)]="job.jobsMail"
+                   name="jobsMail">
+             </div>
+
+             <div class="form-group">
+                <label for="">jobsDescription</label>
+                <!-- <input type="text" class="form-control" id="jobsDescription" [(ngModel)]="job.jobsDescription"
+                   name="jobsDescription"> -->
+                <ckeditor [editor]="Editor" id="jobsDescription" [(ngModel)]="job.jobsDescription"
+                   name="jobsDescription">
+                </ckeditor>
+             </div>
+
+             <div class="form-group">
+                <label for="">jobsResponsibilities</label>
+                   <ckeditor [editor]="Editor" id="jobsResponsibilities" [(ngModel)]="job.jobsResponsibilities"
+                   name="jobsResponsibilities">
+                </ckeditor>
+             </div>
+
+             <div class="form-group">
+                <label for="">salary</label>
+                <input type="text" class="form-control" id="salary" [(ngModel)]="job.salary"
+                   name="salary">
+             </div>
+
+             <div class="form-group">
+                <label for="">jobsType</label>
+                <input type="text" class="form-control" id="jobsType" [(ngModel)]="job.jobsType"
+                   name="jobsType">
+             </div>
+
+             <div class="form-group">
+                <label for="">jobsSkill</label>
+                   <ckeditor [editor]="Editor" id="jobsSkill" [(ngModel)]="job.jobsSkill"
+                   name="jobsSkill">
+                </ckeditor>  
+             </div>
+
+             <div class="form-group">
+                <label for="">Created Date</label>
+                <input type="text" class="form-control" id="createdDate" [(ngModel)]="job.createdDate"
+                   name="createdDate">
+             </div>
+ 
+             <div class="form-group">
+                <label for="">Created By</label>
+                <input type="text" class="form-control" id="createdBy" [(ngModel)]="job.createdBy" name="createdBy">
+             </div>
+ 
+             <div class="form-group">
+                <label for="">Modified Date</label>
+                <input type="text" class="form-control" id="modifiedDate" [(ngModel)]="job.modifiedDate"
+                   name="modifiedDate">
+             </div>
+ 
+             <div class="form-group">
+                <label for="">Modified By</label>
+                <input type="text" class="form-control" id="modifiedBy" [(ngModel)]="job.modifiedBy" name="modifiedBy">
+             </div>
+
+             <div class="form-group">
+               <label for="">status</label>
+               <input type="text" class="form-control" id="status" [(ngModel)]="job.status"
+                  name="status">
+            </div>
+ 
+             <button class="btn btn-success mt-3" type="submit">Submit</button>
+          </form>
+       </div>
+    </div>
+ </div>
